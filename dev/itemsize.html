@@ -11,53 +11,117 @@
 
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
 </head>
 <body>
 
 <div class="main">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-9">
+    <div class="container" style=" width: 600px; margin-left:auto; margin-right:auto;">
+
+        <div class="row" id="row0">
+            <div class="col-md-6">
+                 <a class="btn-lg btn-default choice_btn pull-left" id="firstbutton" style="width:300px" href="traveller.html">I am travelling</a>
+            </div>
+            <div class="col-md-6">
+                 <a class="btn-lg btn-default choice_btn pull-left" style="width:300px; margin-left:10px" href="">I need something</a>
+            </div>
+
+            <button class="btn btn-default" onclick="nextView1()"  >Next</button>
+        </div>
+
+
+        <div class="row" style="display:none;" id="row1">
+            <div class="col-md-6">
+                 <a class="btn-lg btn-default choice_btn pull-left" style="width:300px" href="traveller.html">I am travelling</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            I'm leaving from
+            <input for="input-4" class="form-control" aria-label="..." ></input>
+            I'm going to
+            <input for="input-4" class="form-control" aria-label="..." ></input>
+
+            <button class="btn btn-default" onclick="showView2()"  >Next</button>
+        </div>
+
+        <div class="row" style="display:none;" id="row2">
+            <div class="col-xs-12">
                 <br>
                 <p>I can bring something the size of...</p>
 
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="" name="check-env">
-                        an envelope
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="" name="check-asp">
-                        a box of asperin
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="" name="check-book">
-                        a book
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" value="" name="check-book">
-                        a shoebox
-                    </label>
-                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input id="input-1" type="checkbox" aria-label="...">
+                    </span>
+                  <label for="input-1" class="form-control" aria-label="..." >an envelope </label>
+                </div><!-- /input-group -->
+
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input id="input-2" type="checkbox" aria-label="...">
+                    </span>
+                    <label for="input-2" class="form-control" aria-label="..." >a box of asperin </label>
+                </div><!-- /input-group -->
+
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <input id="input-3" type="checkbox" aria-label="...">
+                    </span>
+                    <label for="input-3" class="form-control" aria-label="..." >a book </label>
+                </div><!-- /input-group -->
+
+                 <div class="input-group">
+                    <span class="input-group-addon">
+                        <input id="input-4" type="checkbox" aria-label="...">
+                    </span>
+                    <label for="input-4" class="form-control" aria-label="..." >a shoebox</label>
+                </div><!-- /input-group -->
+
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input id="input-4" type="checkbox" aria-label="...">
+                    </span>
+                    <input for="input-4" class="form-control" aria-label="..." ></input>
+                </div><!-- /input-group -->
             </div>
         </div>
     </div>
 </div>
     <script>
+
+        var refJobs = new Firebase('https://jeebly-v01.firebaseio.com/jobs');
+        var viewCount = 0;
+
         function send() {
-            $('.myCheckbox').prop('checked', true);
+            var checkbox_1 = $('#input-1').prop('checked');
+            var checkbox_2 = $('#input-1').prop('checked');
+            var checkbox_3 = $('#input-1').prop('checked');
+            var checkbox_4 = $('#input-1').prop('checked');
+
+
         }
+
+        function nextView1() {
+            $('#row0').hide();
+            $('#firstbutton').hide();
+            $('#row1s);
+        }
+
+        function showView2() {
+            $('#row1').hide();
+            $('#row2').show();
+        }
+
+
 
     </script>
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+
+
 </body>
 </html>
