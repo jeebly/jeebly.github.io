@@ -1,0 +1,47 @@
+body {
+    background: url(../img/intro-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.topnav{
+    background-color: rgba(0,0,0, 0.1);
+    border-color: rgba(0,0,0, 0.0);
+}
+.choice_section {
+    position: absolute;
+    background-color: rgba(0,0,0, 0.5);
+    top: 25%;
+    width:100%;
+}
+.choice_btn:hover{
+    text-decoration: none;
+}
+.choice_section_btns{
+    text-align: center;
+    height: 150px;
+    margin-top:50px;
+}
+.choice_section_btns_large{
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choice_btn{
+    background-color: rgba(255,255,255, 0.5);
+    cursor: pointer;
+}
+.selection_section{
+    width:100%;
+
+    margin-left: 0px;
+    top:40%;
+    position: absolute;
+    height:250px;
+    background-color-: rgba(0,0,0, 0.2);
+}
+#navdiv.collapse.in{
+    background-color: rgba(255,255,255, 1);
+}
