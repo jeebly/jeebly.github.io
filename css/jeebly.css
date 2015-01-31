@@ -6,12 +6,20 @@ body {
     background-size: cover;
 }
 .topnav{
-    background-color: rgba(0,0,0, 0.1);
+    background-color: rgba(0,0,0, 0.0);
     border-color: rgba(0,0,0, 0.0);
+}
+.navbar-default .navbar-nav>li>a{
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #FFFFFF;
+    opacity: 1;
 }
 .choice_section {
     position: absolute;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(255,255,255, 0.2);
     top: 25%;
     width:100%;
 }
@@ -30,7 +38,7 @@ body {
 }
 
 .choice_btn{
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255,255,255, 0.75);
     cursor: pointer;
 }
 .selection_section{
@@ -44,4 +52,7 @@ body {
 }
 #navdiv.collapse.in{
     background-color: rgba(255,255,255, 1);
+}
+#user_choice_traveller_back_btn{
+    cursor: pointer;
 }
