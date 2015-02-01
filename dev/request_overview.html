@@ -61,46 +61,9 @@
 </nav>
 
 
-<div class="container-fluid_">
+<div class="container">
 
-    <div class="row-fluid_">
-        <div>
-            <div class="selection_section">
-                <div class="choice_section">
-                    <div class="choice_section_btns">
-                        <div id="user_choice_btns">
-                            <div class="visible-md visible-lg visible-sm choice_section_btns_large">
-                                <div id="traveller_btn" class="btn-lg btn-default choice_btn pull-left" style="width:300px" href="javascript:void(0)">I am travelling</div>
-                                <div class="btn-lg btn-default choice_btn pull-left" style="width:300px; margin-left:10px" href="">I need something</div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="visible-xs" style="width:100%">
-                                <div class="btn-xs btn-default choice_btn" style="width:80%;margin-left:10%;height:50px;font-size:16px">I am travelling</div>
-                                <br/>
-                                <div class="btn-xs btn-default choice_btn" style="width:80%;margin-left:10%;height:50px;font-size:16px">I need something</div>
-                            </div>
-                        </div>
-                        <div id="user_choice_traveller" style="display: none">
-                            <form class="form form-inline">
-                            <span style="color:#FFFFFF">
-                                <span id="user_choice_traveller_back_btn"><i class="fa fa-chevron-left"></i> Back </span>
-                            </span>
-                                <input style="width:250px" class="form-control" placeholder="Travelling from" />
-                                <input style="width:250px" class="form-control" placeholder="Travelling to" />
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <input id="datepicker" style="width:200px" class="form-control" placeholder="Date" />
-                                </div>
-                                <button class="form-control"><i class="fa fa-chevron-right"></i> Next</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 </div>
 
@@ -109,38 +72,6 @@
 <script src="../js/jquery.js"></script>
 
 <script src="../js/bootstrap.min.js"></script>
-<script src="../js/bootstrap-datepicker.js"></script>
-<script>
 
-    $(document).ready(function(){
-        $("#traveller_btn").on("click", handle_traveller_click);
-        $("#user_choice_traveller_back_btn").on("click", handle_user_choice_traveller_back_btn_click);
-        $("#datepicker").datepicker();
-    });
-    function handle_traveller_click(){
-        $("#user_choice_btns").fadeOut(
-                {
-                    duration: 200,
-                    complete: function () {
-                        $("#user_choice_traveller").fadeIn({
-                            duration: 200
-                        });
-                    }
-
-                });
-    }
-    function handle_user_choice_traveller_back_btn_click(){
-        $("#user_choice_traveller").fadeOut(
-                {
-                    duration: 200,
-                    complete: function () {
-                        $("#user_choice_btns").fadeIn({
-                            duration: 200
-                        });
-                    }
-
-                });
-    }
-</script>
 </body>
 </html>
